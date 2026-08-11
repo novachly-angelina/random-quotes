@@ -1,4 +1,4 @@
-import { GenerateRandomInt } from '../src/utils.js';
+import { GenerateRandomInt } from '../utils/math.js';
 import { handleFavorite } from './favorite.js';
 
 function handleQuote(quotes, setCurrentQuote) {
@@ -13,7 +13,7 @@ function displayQuote(quote) {
   const quoteTextElement = document.getElementById('quote-text');
   const quoteAuthorElement = document.getElementById('quote-author');
   quoteElement.dataset.currentQuoteId = id;
-  quoteTextElement.textContent = text;
+  quoteTextElement.textContent = `"${text}"`;
   quoteAuthorElement.textContent = author;
   handleFavorite(isFavorite);
 }
